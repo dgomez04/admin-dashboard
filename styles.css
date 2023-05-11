@@ -1,0 +1,66 @@
+
+/* remove margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Konkhmer Sleokchher', cursive;
+    color: white;
+}
+
+/* main container grid */ 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* sidebar content */
+.sidebar {
+    grid-column-start: 1;
+    grid-row: 1 / -1;
+    background: #2563eb;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    margin-left: 5%;
+    align-items: center;
+}
+
+/* resize images */
+.logo > img {
+    height: 50px;
+    width: 50px;
+    filter: invert(100%);
+    margin-top: 15px;
+}
+
+ .item > img {
+    height: 34px;
+    width: 34px;
+    filter: invert(95%);
+    margin-bottom: 5px;
+    margin-left: 10%;
+}
+
+
+/* logo text settings */
+.logo > div {
+    font-family: 'Francois One', sans-serif;
+    font-size: 32px;
+}
+
+/* menu text settings */
+
+.menu > .item {
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+}
+
+/* menu grid settings */
+.menu {
+    display: grid;
+}
