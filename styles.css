@@ -3,14 +3,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Konkhmer Sleokchher', cursive;
+    font-family: 'Wix Madefor Display', sans-serif;
     color: white;
 }
 
 /* main container grid */ 
 .container {
     display: grid;
-    grid-template-columns: 1.5fr 4fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 4fr;
     width: 100vw;
     height: 100vh;
@@ -101,6 +101,103 @@ header {
 
 }
 
+/* flight tracker content */
+
+.flightcontent {
+    margin-left: 5%;
+    margin-top: 1%;
+    grid-column: 2 / 3 ;
+    grid-row: 3 / 4;
+}
+
+.flightcontent > .text {
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.flightcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: (auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* flight containers */
+.flight {
+    height: 250px;
+    background-color: #eff6ff;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.flight > .gradient {
+    grid-row: 1 / 3;
+    border-radius: 20px 0 0 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+/* flight information containers*/
+
+.flight > .content {
+    grid-column-start: 2;
+    grid-row: 1 / 2;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.departuretime {
+    position: relative;
+    right: 10px;
+    font-size: 24px;
+    color: #0c4a6e;
+}
+
+.flightcode {
+    position: relative;
+    left: 50px;
+    color: #0c4a6e;
+}
+
+.flightcode span {
+    color: #0c4a6e;
+    font-weight: 500;
+
+
+}
+
+.flightinfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flightinfo span {
+    color: #312e81;
+    font-size: 40px;
+}
+
+/* flight actions container */
+
+.actions {
+    display: flex;
+    gap: 20px;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.actions:hover {
+    cursor: pointer;
+}
 
 /* resize images */
 .logo > img {
@@ -144,6 +241,17 @@ header {
     border-radius: 50%;
 }
 
+.flightinfo img {
+    width: 20px;
+    height: 20px;
+}
+
+.actions > img {
+    grid-column: 2;
+    grid-row: 2 / 3;
+    width: 30px;
+    height: 30px;
+}
 
 /* logo text settings */
 .logo > div {
