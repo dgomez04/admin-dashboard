@@ -10,18 +10,55 @@
 /* main container grid */ 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 0.5fr 1fr 4fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 4fr;
     width: 100vw;
     height: 100vh;
 }
 
+/*header (navigation) content */
+header {
+    grid-column: 2 / -1;
+    background-color: white;
+    display: grid;
+    align-items: center ;
+    justify-content: center;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* searchbar content */ 
+.searchbar > div{
+    width: 700px;
+    height: 35px;
+    background-color: #eef2ff;
+    border-radius: 25px;
+    float: left;
+}
+
+.searchbar {
+    margin-left: 5%;
+}
+
+/* header > user content */
+.user {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.user > span {
+    font-size: 18px;
+    color: black;
+}
+
+
 /* sidebar content */
 .sidebar {
     grid-column-start: 1;
-    grid-row: 1 / -1;
+    grid-row: 1 / -1;    
     background: #2563eb;
 }
+
 
 .logo {
     display: grid;
@@ -30,6 +67,40 @@
     margin-left: 5%;
     align-items: center;
 }
+
+/* buttons content */
+.buttonsection {
+    background-color: white;
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 0.1fr);
+    justify-content: end;
+    align-items: center;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.19);
+}
+
+.buttonsection > div {
+    color: black;
+    float: left;
+}
+
+.buttonsection > button {
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 25px;
+    background-color: #2563eb;
+}
+
+.buttonsection > button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+
+}
+
 
 /* resize images */
 .logo > img {
@@ -49,6 +120,26 @@
 .login > img {
     height: 55px;
     width: 55px;
+    border: 2px solid #1e40af;
+    border-radius: 50%;
+}
+
+.searchbar > img {
+    margin-top: 3px;
+    height: 28px;
+    width: 28px;
+    margin-right: 2px;
+    float: left;
+}
+
+#notification {
+    width: 24px;
+    height: 24px;
+}
+
+#userlogo {
+    width: 45px;
+    height: 45px;
     border: 2px solid #1e40af;
     border-radius: 50%;
 }
