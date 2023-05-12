@@ -51,6 +51,9 @@ header {
     color: black;
 }
 
+#notification:hover {
+    cursor: pointer;
+}
 
 /* sidebar content */
 .sidebar {
@@ -88,6 +91,7 @@ header {
 .buttonsection > button {
     border: none;
     font-size: 16px;
+    font-weight: 500;
     text-align: center;
     width: 100px;
     height: 35px;
@@ -111,7 +115,6 @@ header {
 }
 
 .flightcontent > .text {
-    font-family: 'Wix Madefor Display', sans-serif;
     font-weight: 500;
     font-size: 24px;
     letter-spacing: 0.5px;
@@ -199,6 +202,85 @@ header {
     cursor: pointer;
 }
 
+/* feed container */
+.feed {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.feed > .text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    color: #172554;
+}
+
+/* announcements container (under feed)*/
+.announcements {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: (auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+}
+
+.announcements > .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    background-color: #eff6ff;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.19);
+}
+
+.announcement {
+    color: #0c4a6e;
+}
+
+.flightnumber {
+    color: #0c4a6e;
+    font-weight: 500;
+}
+
+/* trending container */
+.trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: (auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+}
+
+.trending > .content {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.19);
+    width: 170px;
+    height: 50px;
+    background-color: #fca5a5;
+}
+
+.content > .gradient {
+    border-radius: 20px 0 0 20px;
+    background: rgb(223,45,85);
+    background: linear-gradient(4deg, rgba(223,45,85,1) 0%, rgba(228,15,15,1) 35%, rgba(255,154,0,1) 100%);
+}
+
+.content > .info {
+    font-weight: 500;
+    text-align: center;
+    align-self: center;
+}
+
+.info > span {
+    font-size: 25px;
+    color: #b91c1c;
+}
+
 /* resize images */
 .logo > img {
     height: 50px;
@@ -251,6 +333,11 @@ header {
     grid-row: 2 / 3;
     width: 30px;
     height: 30px;
+}
+
+.content > .info > img {
+    width: 18px;
+    height: 18px;
 }
 
 /* logo text settings */
